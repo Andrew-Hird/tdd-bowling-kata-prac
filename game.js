@@ -1,6 +1,16 @@
 module.exports = {
-    scoreFrame: scoreFrame
+    scoreFrame: scoreFrame,
+    scoreGame: scoreGame
 }
+
+function scoreGame(bowl) {
+  var total = 0
+  for (var i = 0; i < 10; i++) {
+    total += scoreFrame(bowl[i], bowl[i+1], bowl[i+2])
+  }
+  return total
+}
+
 
 function scoreFrame(frame, nextFrame, nextNextFrame) {
     if (isDoubleStrike(frame, nextFrame)) {
