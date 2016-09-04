@@ -30,3 +30,12 @@ test('scores a spare frame', function (t) {
   t.equal(actual, expected)
   t.end()
 })
+
+test('scores a single strike frame', function (t) {
+  var frame = [10, 0]
+  var nextFrame = [3, 2]
+  var expected = 15
+  var actual = game.scoreFrame(frame, nextFrame)
+  t.equal(actual, expected)
+  t.end()
+})
