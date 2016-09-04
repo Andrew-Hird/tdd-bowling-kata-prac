@@ -57,3 +57,5 @@ test('scores a game', function (t) {
   t.equal(actual, expected)
   t.end()
 })
+
+test('scores a strike in the 10th ')
