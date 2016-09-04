@@ -3,18 +3,28 @@ module.exports = {
 }
 
 function scoreFrame(frame, nextFrame, nextNextFrame) {
-    if (frame[0] === 10 && nextFrame[0] === 10) {
+    if (isDoubleStrike(frame, nextFrame)) {
       return scoreDoubleStrike(frame, nextFrame, nextNextFrame)
 
-    } else if (frame[0] === 10) {
+    } else if (isSingleStrike(frame)) {
         return scoreSingleStrike(frame, nextFrame)
 
-    } else if (frame[0] + frame[1] === 10) {
+    } else if (isSpare(frame, nextFrame)) {
         return scoreSpareFrame(frame, nextFrame)
 
     } else {
         return scoreNormalFrame(frame)
     }
+}
+
+function isDoubleStrike(frame, nextFrame){
+  return frame[0] === 10 && nextFrame[0] === 10
+}
+function isSingleStrike(frame) {
+  return frame[0] === 10
+}
+function isSpare(frame, nextFrame) {
+  return frame[0] + frame[1] === 10
 }
 
 function scoreDoubleStrike(frame, nextFrame, nextNextFrame) {
