@@ -22,6 +22,7 @@ function scoreLastFrame(bowl) {
     }
     return isTenth
 }
+
 function scoreFrame(frame, nextFrame, nextNextFrame) {
     if (isDoubleStrike(frame, nextFrame)) {
         return scoreDoubleStrike(frame, nextFrame, nextNextFrame)

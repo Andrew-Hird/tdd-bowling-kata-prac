@@ -58,4 +58,18 @@ test('scores a game', function (t) {
   t.end()
 })
 
-test('scores a strike in the 10th ')
+test('scores a strike in the 10th', function (t) {
+  var bowl = [[1, 2], [6, 4], [5, 4], [10, 0], [7, 2], [10, 0], [10, 0], [5, 2], [7, 0], [10, 10, 10]]
+  var expected = 141
+  var actual = game.scoreGame(bowl)
+  t.equal(actual, expected)
+  t.end()
+})
+
+test('scores a spare in the 10th', function (t) {
+  var bowl = [[1, 2], [6, 4], [5, 4], [10, 0], [7, 2], [10, 0], [10, 0], [5, 2], [7, 0], [3, 7, 4]]
+  var expected = 125
+  var actual = game.scoreGame(bowl)
+  t.equal(actual, expected)
+  t.end()
+})
