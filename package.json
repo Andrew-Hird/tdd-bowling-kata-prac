@@ -1,0 +1,23 @@
+{
+  "name": "tdd-bowling-kata-prac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "^4.6.0"
+  },
+  "scripts": {
+    "test": "tape tests/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrew-Hird/tdd-bowling-kata-prac.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrew-Hird/tdd-bowling-kata-prac/issues"
+  },
+  "homepage": "https://github.com/Andrew-Hird/tdd-bowling-kata-prac#readme"
+}
